@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Weather Alert</string>
+    <string name="close">Close</string>
+    <string name="type_a_location">Type a location (e.g. London)</string>
+    <string name="time">Time</string>
+    <string name="pick_a_different_location">Pick a different location</string>
+    <string name="weather_forecast">Weather Forecast</string>
+    <string name="no_connection">No Internet Connection</string>
+    <string name="connection_restored">Connection restored!</string>
+</resources>

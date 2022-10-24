@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/componentBackgroundColor">
+
+        <com.shakif.weatheralertapp.ui.custom.textviews.TextLabel
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchTextView"
+            tools:text="New york, US"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="2dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/borderColor"
+            app:layout_constraintTop_toBottomOf="@id/searchTextView"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

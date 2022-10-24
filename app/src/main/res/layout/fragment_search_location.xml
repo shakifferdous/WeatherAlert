@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainBackgroundColor">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="25dp"
+            android:layout_height="0dp"
+            android:id="@+id/backButton"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintTop_toTopOf="@id/searchBackground"
+            app:layout_constraintBottom_toBottomOf="@id/searchBackground"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/custom_search_view_height"
+            android:id="@+id/searchBackground"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/custom_tags_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/backButton"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="0dp"
+            android:layout_height="@dimen/custom_search_view_height"
+            android:id="@+id/searchEditText"
+            android:background="@android:color/transparent"
+            android:hint="@string/type_a_location"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="4dp"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            app:layout_constraintTop_toTopOf="@id/searchBackground"
+            app:layout_constraintBottom_toBottomOf="@id/searchBackground"
+            app:layout_constraintStart_toStartOf="@id/searchBackground"
+            app:layout_constraintEnd_toStartOf="@id/searchProgressbar" />
+
+        <ProgressBar
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/searchProgressbar"
+            android:layout_marginEnd="6dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/primaryAccentColor"
+            app:layout_constraintTop_toTopOf="@id/searchBackground"
+            app:layout_constraintBottom_toBottomOf="@id/searchBackground"
+            app:layout_constraintEnd_toStartOf="@id/iconImageView" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/iconImageView"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_search_white"
+            app:layout_constraintTop_toTopOf="@id/searchBackground"
+            app:layout_constraintBottom_toBottomOf="@id/searchBackground"
+            app:layout_constraintEnd_toEndOf="@id/searchBackground" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingTop="12dp"
+            android:id="@+id/locationSearchRecyclerView"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/each_location_search_item"
+            app:layout_constraintTop_toBottomOf="@id/searchEditText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

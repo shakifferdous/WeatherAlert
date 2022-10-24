@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/custom_tags_view"
+    android:orientation="horizontal">
+
+    <com.shakif.weatheralertapp.ui.custom.textviews.TextLabel
+        android:id="@+id/selectedItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="BG" />
+
+    <View
+        android:id="@+id/endPaddingView"
+        android:layout_width="5dp"
+        android:layout_height="15dp"
+        android:paddingEnd="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/selectedItemName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/selectedItemName"
+        app:layout_constraintTop_toTopOf="@id/selectedItemName" />
+
+
+    <ImageButton
+        android:id="@+id/selectedItemCrossImage"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@android:color/transparent"
+        android:paddingEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/selectedItemName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/selectedItemName"
+        app:layout_constraintTop_toTopOf="@id/selectedItemName"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

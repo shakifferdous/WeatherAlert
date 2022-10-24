@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="submit_button_height">40dp</dimen>
+    <dimen name="navbar_height">50dp</dimen>
+    <dimen name="custom_edittext_height">40dp</dimen>
+    <dimen name="custom_search_view_height">44dp</dimen>
+
+    <dimen name="fontSizeRegular" format="float">14.0</dimen>
+    <dimen name="fontSizeBig" format="float">17.0</dimen>
+    <dimen name="fontSizeSmall" format="float">12.0</dimen>
+    <dimen name="fontSizeCallout" format="float">13.0</dimen>
+    <dimen name="fontSizeExtraLarge" format="float">19.0</dimen>
+    <dimen name="borderWidth">1dp</dimen>
+    <dimen name="pillTabsCornerRadius">16dp</dimen>
+    <dimen name="pillTabHeight">30dp</dimen>
+    <dimen name="cornerRadius" format="float">6.0</dimen>
+    <dimen name="cornerRadiusDP">5dp</dimen>
+    <dimen name="titleLabelHeightDP">60dp</dimen>
+    <dimen name="segmentHeightDP">40dp</dimen>
+</resources>

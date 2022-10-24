@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/componentBackgroundColor">
+
+        <com.shakif.weatheralertapp.ui.custom.textviews.SecondaryTextLabelSmall
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeLabel"
+            android:text="@string/time"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.shakif.weatheralertapp.ui.custom.textviews.TextLabel
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeTextView"
+            tools:text="12 August 2022 12:30:00"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/timeLabel"
+            app:layout_constraintStart_toEndOf="@id/timeLabel" />
+
+        <com.shakif.weatheralertapp.ui.custom.textviews.TextLabelBig
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/temperatureTextView"
+            tools:text="18.27C"
+            android:layout_marginTop="6dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/timeTextView"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
